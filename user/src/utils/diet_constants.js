@@ -38,7 +38,7 @@ export const DIET_DEFINITIONS = [
       "Redukuje wzdęcia, bóle brzucha, biegunki i uczucie ciężkości, poprawiając komfort trawienny oraz jakość codziennego funkcjonowania.",
   },
   {
-    id: "bezglutenowa",
+    id: "bezglutenowe",
     title: "Dieta Bezglutenowa",
     tag: "Bezglutenowe",
     image: glutenImg,
@@ -56,7 +56,7 @@ export const DIET_DEFINITIONS = [
       "Stabilizuje poziom glukozy i insuliny, wspomaga redukcję masy ciała, zmniejsza napady głodu oraz poprawia kontrolę apetytu.",
   },
   {
-    id: "wysokobialkow",
+    id: "wysokobialkowe",
     title: "Dieta Wysokobiałkowa",
     tag: "Wysokobiałkowe",
     image: highProteinImg,
@@ -65,7 +65,7 @@ export const DIET_DEFINITIONS = [
       "Wspiera regenerację i budowę mięśni, zwiększa uczucie sytości, przyspiesza metabolizm oraz pomaga w utrzymaniu masy mięśniowej podczas redukcji.",
   },
   {
-    id: "niskotluszczowa",
+    id: "niskotluszczowe",
     title: "Dieta Niskotłuszczowa",
     tag: "Niskotłuszczowe",
     image: lowFatImg,

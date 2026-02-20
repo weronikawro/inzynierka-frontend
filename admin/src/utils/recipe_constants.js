@@ -30,14 +30,14 @@ export const formCategories = [
 
 export const availableTags = [
   { id: "Klasyczna", label: "Klasyczna" },
-  { id: "Wegetariańska", label: "Wegetariańska" },
-  { id: "Wegańska", label: "Wegańska" },
+  { id: "Wegetariańskie", label: "Wegetariańska" },
+  { id: "Wegańskie", label: "Wegańska" },
   { id: "Bez laktozy", label: "Bez laktozy" },
-  { id: "Bezglutenowa", label: "Bezglutenowa" },
+  { id: "Bezglutenowe", label: "Bezglutenowa" },
   { id: "Low Carb", label: "Low Carb" },
-  { id: "Wysokobiałkowa", label: "Wysokobiałkowa" },
-  { id: "Niskotłuszczowa", label: "Niskotłuszczowa" },
-  { id: "Lekkostrawna", label: "Lekkostrawna" },
+  { id: "Wysokobiałkowe", label: "Wysokobiałkowa" },
+  { id: "Niskotłuszczowe", label: "Niskotłuszczowa" },
+  { id: "Lekkostrawne", label: "Lekkostrawna" },
   { id: "DASH", label: "DASH" },
   { id: "FODMAP", label: "FODMAP" },
 ];
