@@ -1,0 +1,415 @@
+.diets-layout {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 40px 0;
+  min-height: 100vh;
+}
+
+.diet-page-header {
+  text-align: center;
+  margin-bottom: 60px;
+  width: 100%;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  border-radius: 20px;
+  border: 1px solid #f1f5f9;
+}
+
+.diet-page-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  color: #1a202c;
+  margin-bottom: 20px;
+  font-weight: 800;
+  line-height: 1.1;
+  position: relative;
+  display: inline-block;
+}
+
+.diet-page-header h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  background-color: #7bc142;
+  margin: 20px auto 0 auto;
+  border-radius: 3px;
+}
+
+.diet-page-header p {
+  color: #64748b;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.diet-section {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f1f5f9;
+}
+
+.diet-info {
+  margin-bottom: 30px;
+  border-bottom: none;
+  padding-bottom: 0;
+  border-left: 5px solid #7bc142;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.diet-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  color: #1a202c;
+  margin: 0 0 15px 0;
+  font-weight: 700;
+}
+
+.diet-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  max-width: 100%;
+  text-align: justify;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.diet-subtitle {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-bottom: 20px;
+  display: block;
+  letter-spacing: 0.05em;
+}
+
+.diet-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.diet-recipes-scroll {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 5px 25px 5px;
+  width: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.diet-recipes-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  width: 44px;
+  height: 44px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  color: #7bc142;
+  font-size: 1.2rem;
+  z-index: 10;
+  transition: all 0.2s;
+}
+
+.carousel-arrow:hover {
+  background: #7bc142;
+  color: white;
+  transform: translateY(-60%) scale(1.1);
+  border-color: #7bc142;
+}
+
+.carousel-arrow.left {
+  left: -22px;
+}
+.carousel-arrow.right {
+  right: -22px;
+}
+
+.diet-recipe-card {
+  min-width: 280px;
+  max-width: 280px;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.diet-recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  border-color: #7bc142;
+}
+
+.diet-card-image {
+  height: 180px;
+  width: 100%;
+  background: #f7fafc;
+  overflow: hidden;
+  position: relative;
+}
+
+.diet-badges-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  z-index: 5;
+}
+
+.diet-category-badge {
+  background: rgba(255, 255, 255, 0.95);
+  color: #7bc142;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+}
+
+.diet-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.diet-recipe-card:hover .diet-card-image img {
+  transform: scale(1.05);
+}
+
+.diet-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7bc142;
+}
+
+.diet-placeholder img.placeholder-icon-scaled {
+  width: 70px;
+  height: 70px;
+  opacity: 1;
+  object-fit: contain;
+  filter: invert(29%) sepia(34%) saturate(1496%) hue-rotate(59deg)
+    brightness(94%) contrast(90%);
+}
+
+.diet-card-content {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.diet-card-content h4 {
+  margin: 0 0 10px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  color: #1a202c;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.diet-card-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+}
+
+.diet-kcal {
+  font-weight: 800;
+  color: #7bc142;
+}
+.diet-macros {
+  color: #718096;
+}
+
+.diet-card-tags {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.diet-mini-tag {
+  font-size: 0.65rem;
+  background: #f7fafc;
+  border: 1px solid #edf2f7;
+  padding: 3px 8px;
+  border-radius: 12px;
+  color: #4a5568;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.diet-add-btn {
+  margin-top: auto;
+  width: 100%;
+  background: #f7fafc;
+  color: #4a5568;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.diet-add-btn:hover {
+  background: #7bc142;
+  color: white;
+}
+
+.modern-select {
+  width: 100%;
+  height: 48px;
+  padding: 0 15px;
+  padding-right: 40px;
+  border: 2px solid #edf2f7;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: #4a5568;
+  background-color: #f8fafc;
+  cursor: pointer;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 10px auto;
+}
+.modern-select:focus {
+  outline: none;
+  border-color: #7bc142;
+  background-color: white;
+}
+.diet-top {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.diet-image {
+  width: 320px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.diet-benefits {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #2d3748;
+  max-width: 100%;
+  text-align: justify;
+}
+
+.diet-divider-container {
+  margin: 40px 0 20px 0;
+  text-align: left;
+}
+
+.diet-section-divider {
+  border: 0;
+  height: 1px;
+  background: #e2e8f0;
+  margin-bottom: 25px;
+}
+
+.diet-recipes-heading {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #2d3748;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  border-left: 4px solid #7bc142;
+  padding-left: 15px;
+}
+
+@media (max-width: 768px) {
+  .diet-recipes-heading {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .diet-top {
+    flex-direction: column;
+  }
+
+  .diet-image {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .diet-section {
+    padding: 20px;
+  }
+  .carousel-arrow.left {
+    left: 0;
+  }
+  .carousel-arrow.right {
+    right: 0;
+  }
+  .diet-page-header h1 {
+    font-size: 2.5rem;
+  }
+}

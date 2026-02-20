@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap");
+
+@import "./base/variables.css";
+@import "./base/reset.css";
+@import "./base/typography.css";
+
+@import "./layout/containers.css";
+
+@import "./components/buttons.css";
+@import "./components/navbar/navbar.css";
+@import "./components/auth_modal/auth_modal.css";
+@import "./components/auth_modal/success_message.css";
+@import "./components/auth_modal/forms.css";
+
+@import "./utils/helpers.css";
+
+@import "./pages/home/home.css";
+@import "./pages/diary/diary.css";

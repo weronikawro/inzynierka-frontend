@@ -1,0 +1,144 @@
+.btn-primary,
+.submit-btn,
+.btn-action-flat.primary {
+  background: linear-gradient(135deg, #7bc142 0%, #6ba237 100%) !important;
+  color: white !important;
+  border: none !important;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(123, 193, 66, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary:hover,
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(123, 193, 66, 0.4);
+  filter: brightness(1.05);
+}
+
+.btn-secondary,
+.cancel-btn,
+.btn-action-flat.secondary,
+.btn-cancel {
+  background: #f7fafc !important;
+  color: #4a5568 !important;
+  border: 1px solid #e2e8f0 !important;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover,
+.cancel-btn:hover {
+  background: #edf2f7 !important;
+  border-color: #cbd5e0 !important;
+  color: #2d3748 !important;
+}
+
+.entry-edit-btn,
+.entry-del-btn,
+.ing-del-small,
+.remove-ingredient-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1.2rem;
+  background: #f8fafc;
+}
+
+.entry-edit-btn {
+  color: #4299e1;
+}
+.entry-edit-btn:hover {
+  background: #ebf8ff;
+  transform: scale(1.1);
+}
+
+.entry-del-btn,
+.ing-del-small {
+  color: #e53e3e;
+}
+.entry-del-btn:hover {
+  background: #fff5f5;
+  transform: scale(1.1);
+}
+
+.plus-add-btn {
+  background: white;
+  color: #7bc142;
+  border: 2px solid #7bc142;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: all 0.2s;
+}
+
+.plus-add-btn:hover {
+  background: #7bc142;
+  color: white;
+  transform: rotate(90deg);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-btn,
+  .login-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    min-width: 120px;
+    padding: var(--spacing-xs) var(--spacing-md);
+  }
+
+  .auth-btn,
+  .login-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group .btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .auth-btn,
+  .login-btn {
+    transition: none;
+  }
+}

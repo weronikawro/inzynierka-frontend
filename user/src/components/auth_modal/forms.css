@@ -1,0 +1,350 @@
+.auth-page-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f2f5;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.auth-card {
+  background: white;
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  box-sizing: border-box;
+  animation: cardEnter 0.5s ease-out;
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-header {
+  margin-bottom: 30px;
+}
+
+.auth-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  color: #1a202c;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.auth-header p {
+  color: #718096;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.auth-form-styled {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+}
+
+.form-group-styled {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label-uppercase {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #718096;
+  letter-spacing: 0.05em;
+  margin-left: 2px;
+}
+
+.input-styled {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background-color: #f1f5f9;
+  color: #2d3748;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.input-styled:focus {
+  outline: none;
+  background-color: white;
+  border-color: #7bc142;
+  box-shadow: 0 0 0 3px rgba(123, 193, 66, 0.1);
+}
+
+.input-styled::placeholder {
+  color: #a0aec0;
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+
+.password-toggle-btn:hover {
+  opacity: 0.8;
+}
+
+.password-toggle-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.auth-btn-primary {
+  margin-top: 10px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #7bc142;
+  background: linear-gradient(135deg, #7bc142, #6ba237);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(123, 193, 66, 0.3);
+}
+
+.auth-btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(123, 193, 66, 0.4);
+}
+
+.auth-btn-primary:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.auth-footer-link {
+  text-align: center;
+  margin-top: 25px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+}
+
+.auth-footer-link p {
+  font-size: 0.9rem;
+  color: #718096;
+  margin: 0;
+}
+
+.auth-footer-link button,
+.auth-footer-link a {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+
+  color: #7bc142;
+  font-weight: 700;
+  margin-left: 5px;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.auth-footer-link button:hover,
+.auth-footer-link a:hover {
+  color: #5a8f2f;
+  text-decoration: underline;
+}
+
+.error-message {
+  background-color: #fff5f5;
+  color: #c53030;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #fed7d7;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.btn-loading {
+  color: transparent !important;
+  position: relative;
+}
+.btn-loading::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -10px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+  .auth-header h1 {
+    font-size: 2rem;
+  }
+}
+
+.forgot-password-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.text-link-underline {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: #4a5568;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.text-link-underline:hover {
+  color: #7bc142;
+}
+
+.auth-footer-link button,
+.auth-footer-link a {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  color: #7bc142;
+  font-weight: 700;
+  margin-left: 5px;
+  transition: color 0.2s;
+}
+
+.auth-footer-link button:hover,
+.auth-footer-link a:hover {
+  color: #5a8f2f;
+  text-decoration: underline;
+}
+
+.auth-success-view {
+  text-align: center;
+  padding: 20px 0;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.success-icon-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #f0fff4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px auto;
+  box-shadow: 0 0 0 10px rgba(123, 193, 66, 0.1);
+}
+
+.success-icon-check {
+  font-size: 2.5rem;
+  color: #7bc142;
+  font-weight: bold;
+}
+
+.auth-success-view h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #1a202c;
+  margin-bottom: 15px;
+}
+
+.auth-success-view p {
+  color: #718096;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+.form-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.field-error-text {
+  color: #e53e3e;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.input-styled.select-placeholder {
+  color: #a0aec0;
+}
+
+.input-styled.select-filled {
+  color: #2d3748;
+}
+
+select.input-styled {
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

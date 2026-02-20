@@ -1,0 +1,74 @@
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+  color: var(--text-color);
+  margin-bottom: var(--spacing-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-color);
+  line-height: var(--line-height);
+  max-width: 65ch;
+}
+
+.text-muted {
+  color: var(--text-light);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-error {
+  color: var(--error-color);
+}
+
+.text-success {
+  color: var(--success-color);
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+.link {
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  transition: color var(--transition-normal);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
