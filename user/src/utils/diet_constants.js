@@ -11,7 +11,7 @@ import fodmapImg from "../assets/images/dieta_fodmap.jpg";
 
 export const DIET_DEFINITIONS = [
   {
-    id: "wegetarianska",
+    id: "wegetarianske",
     title: "Dieta Wegetariańska",
     tag: "Wegetariańskie",
     image: vegeeImg,
@@ -20,7 +20,7 @@ export const DIET_DEFINITIONS = [
       "Wspiera profilaktykę chorób serca, poprawia funkcjonowanie jelit dzięki wysokiej podaży błonnika, sprzyja utrzymaniu prawidłowej masy ciała oraz może obniżać poziom cholesterolu LDL.",
   },
   {
-    id: "weganska",
+    id: "weganskie",
     title: "Dieta Wegańska",
     tag: "Wegańskie",
     image: veganImg,
