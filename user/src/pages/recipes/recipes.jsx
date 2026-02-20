@@ -94,17 +94,6 @@ function RecipesPage({ user }) {
     return () => document.body.classList.remove("no-scroll");
   }, [showAddRecipe, selectedRecipe, customizingRecipe, recipeToEdit]);
 
-  useEffect(() => {
-    applyFilters();
-  }, [
-    recipes,
-    selectedTags,
-    searchQuery,
-    sourceFilter,
-    selectedCategory,
-    user,
-  ]);
-
   const loadRecipes = async () => {
     setLoading(true);
     try {

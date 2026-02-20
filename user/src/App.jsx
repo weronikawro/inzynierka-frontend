@@ -12,6 +12,7 @@ import DietPage from "./pages/diet/diet";
 import AccountPage from "./pages/account/account";
 import ArticlesPage from "./pages/articles/articles";
 import SuccessMessage from "./components/auth_modal/success_message";
+import ApiService from "./utils/api.js";
 import "./App.css";
 
 function App() {
