@@ -114,8 +114,6 @@ function DietPage({ user }) {
                 (r) => r.tags && r.tags.includes(diet.tag),
               );
 
-              if (dietRecipes.length === 0) return null;
-
               return (
                 <DietSection
                   key={diet.id}

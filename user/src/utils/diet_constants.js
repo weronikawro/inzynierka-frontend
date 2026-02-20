@@ -40,7 +40,7 @@ export const DIET_DEFINITIONS = [
   {
     id: "bezglutenowa",
     title: "Dieta Bezglutenowa",
-    tag: "Bezglutenowa",
+    tag: "Bezglutenowe",
     image: glutenImg,
     desc: "Podstawowa terapia żywieniowa w celiakii oraz nieceliakalnej nadwrażliwości na gluten. Eliminuje pszenicę, żyto, jęczmień oraz produkty je zawierające. Opiera się na naturalnie bezglutenowych produktach takich jak ryż, gryka, kukurydza, komosa ryżowa i ziemniaki.",
     benefits:
@@ -67,7 +67,7 @@ export const DIET_DEFINITIONS = [
   {
     id: "niskotluszczowa",
     title: "Dieta Niskotłuszczowa",
-    tag: "Niskotłuszczowa",
+    tag: "Niskotłuszczowe",
     image: lowFatImg,
     desc: "Model żywienia ograniczający spożycie tłuszczów, szczególnie nasyconych i trans. Zalecany przy schorzeniach wątroby, trzustki oraz w profilaktyce chorób układu krążenia.",
     benefits:

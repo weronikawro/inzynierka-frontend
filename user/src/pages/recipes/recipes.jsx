@@ -117,7 +117,7 @@ function RecipesPage({ user }) {
     }
   };
 
-  const applyFilters = () => {
+  useEffect(() => {
     let filtered = [...recipes];
 
     if (user) {
@@ -137,7 +137,7 @@ function RecipesPage({ user }) {
 
     if (selectedTags.length > 0) {
       filtered = filtered.filter((recipe) =>
-        selectedTags.some((tag) => recipe.tags && recipe.tags.includes(tag)),
+        selectedTags.every((tag) => recipe.tags && recipe.tags.includes(tag)),
       );
     }
 
@@ -145,13 +145,21 @@ function RecipesPage({ user }) {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter(
         (recipe) =>
-          recipe.name.toLowerCase().includes(query) ||
+          recipe.name?.toLowerCase().includes(query) ||
           (recipe.description &&
             recipe.description.toLowerCase().includes(query)),
       );
     }
+
     setFilteredRecipes(filtered);
-  };
+  }, [
+    recipes,
+    selectedTags,
+    searchQuery,
+    sourceFilter,
+    selectedCategory,
+    user,
+  ]);
 
   const handleTagToggle = (tag) => {
     setSelectedTags((prev) =>
