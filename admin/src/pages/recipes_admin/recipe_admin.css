@@ -669,3 +669,59 @@
     background: #fff5f5;
   }
 }
+
+@media (max-width: 768px) {
+  .drawer-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .recipe-form {
+    padding: 20px 15px;
+  }
+
+  .recipe-form-header {
+    padding: 15px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ingredient-card-bottom {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 10px;
+  }
+
+  .ing-amount-group {
+    grid-column: 1 / -1;
+  }
+
+  .btn-remove-ing-card {
+    grid-column: 1 / -1;
+    margin-top: 5px;
+    border-color: #fecaca;
+    background: #fff5f5;
+  }
+
+  .image-upload-box,
+  .image-preview-container {
+    height: 180px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    padding: 15px 20px;
+  }
+
+  .cancel-btn,
+  .submit-btn {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .nutrition-summary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

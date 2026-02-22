@@ -405,3 +405,36 @@
 .category-value {
   text-align: right;
 }
+
+@media (max-width: 768px) {
+  .recipe-details-header {
+    padding: 15px 20px;
+  }
+
+  .recipe-details-title h1 {
+    font-size: 1.6rem;
+  }
+
+  .recipe-details-content {
+    padding: 15px 20px;
+  }
+
+  .recipe-hero-image {
+    height: 220px;
+    margin-bottom: 1.5rem;
+  }
+
+  .info-card {
+    padding: 1.2rem;
+  }
+
+  .nutrition-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .ingredients-section,
+  .instructions-section {
+    padding: 1.5rem;
+  }
+}

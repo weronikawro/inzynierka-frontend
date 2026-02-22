@@ -233,3 +233,27 @@
     -webkit-overflow-scrolling: touch;
   }
 }
+
+@media (max-width: 768px) {
+  .admin-content-container {
+    padding: 10px;
+  }
+
+  .admin-page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .admin-toolbar {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .admin-data-table {
+    min-width: 650px;
+  }
+
+  .admin-data-table th,
+  .admin-data-table td {
+    padding: 12px 15px;
+  }
+}

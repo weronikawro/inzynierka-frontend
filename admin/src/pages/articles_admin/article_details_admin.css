@@ -160,3 +160,37 @@
     gap: 10px;
   }
 }
+
+@media (max-width: 768px) {
+  .details-header {
+    height: 60px;
+  }
+
+  .details-header-inner {
+    padding: 0 15px;
+  }
+
+  .details-title {
+    font-size: 1.1rem;
+  }
+
+  .details-content-box {
+    padding: 15px;
+  }
+
+  .details-hero-img,
+  .details-hero-placeholder {
+    height: 200px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+  }
+
+  .details-lead {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+  }
+
+  .details-body {
+    font-size: 0.95rem;
+  }
+}

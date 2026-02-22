@@ -283,3 +283,76 @@
     overflow-x: auto;
   }
 }
+
+@media (max-width: 768px) {
+  .admin-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .stats-card {
+    padding: 20px 15px;
+  }
+
+  .chart-section {
+    padding: 15px;
+  }
+
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .chart-nav-group {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .chart-controls {
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .current-month-label {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .chart-legend {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #f1f5f9;
+    justify-content: center;
+  }
+
+  .chart-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 5px;
+  }
+
+  .activity-chart-svg {
+    min-width: 600px;
+  }
+
+  .recent-activity-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .activity-card {
+    padding: 15px;
+  }
+}

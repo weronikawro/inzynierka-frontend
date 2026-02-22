@@ -311,3 +311,40 @@
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .product-form-header {
+    padding: 15px 20px;
+  }
+
+  .product-inputs-scroll-container {
+    padding: 20px 15px;
+  }
+
+  .form-row,
+  .macro-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .macro-box {
+    padding: 15px;
+  }
+
+  .product-form-actions-fixed {
+    flex-direction: column-reverse;
+    padding: 15px 20px;
+    gap: 10px;
+  }
+
+  .submit-btn,
+  .cancel-btn {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .image-upload-box,
+  .image-preview-container {
+    height: 180px;
+  }
+}

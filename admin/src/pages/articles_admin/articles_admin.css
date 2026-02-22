@@ -629,3 +629,59 @@
     padding: 14px;
   }
 }
+
+@media (max-width: 768px) {
+  .admin-content-container {
+    padding: 10px;
+  }
+
+  .admin-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .add-btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .admin-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .search-wrapper,
+  .diet-filter-wrapper {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .stats-badge {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .admin-table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+  }
+
+  .admin-data-table {
+    min-width: 700px;
+  }
+
+  .article-inputs-scroll-container {
+    padding: 20px 15px;
+  }
+
+  .article-form-header {
+    padding: 15px 20px;
+  }
+
+  .article-form-actions-fixed {
+    padding: 15px 20px;
+  }
+}
