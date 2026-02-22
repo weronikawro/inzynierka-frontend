@@ -424,24 +424,24 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
 
         <div className="form-row">
           <div className="form-group">
-            <label>Czas przygotowania (min)</label>
+            <label>Czas przygotowania</label>
             <input
               name="prepTime"
               type="number"
               min="0"
-              placeholder="np. 15"
+              placeholder="min"
               value={formData.prepTime || ""}
               onChange={handleInputChange}
               className="form-input"
             />
           </div>
           <div className="form-group">
-            <label>Czas gotowania (min)</label>
+            <label>Czas gotowania</label>
             <input
               name="cookTime"
               type="number"
               min="0"
-              placeholder="np. 45"
+              placeholder="min"
               value={formData.cookTime || ""}
               onChange={handleInputChange}
               className="form-input"
@@ -507,7 +507,7 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
                   handleIngredientChange(idx, "amount", e.target.value)
                 }
                 className="form-input ing-val ing-amount-highlight"
-                placeholder="g"
+                placeholder="Ilość (g)"
               />
 
               <input
@@ -519,7 +519,7 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
                   handleIngredientChange(idx, "calories", e.target.value)
                 }
                 className="form-input ing-val"
-                placeholder="0"
+                placeholder="Kcal"
               />
 
               <input
@@ -531,7 +531,7 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
                   handleIngredientChange(idx, "protein", e.target.value)
                 }
                 className="form-input ing-val"
-                placeholder="0"
+                placeholder="Białko (g)"
               />
 
               <input
@@ -543,7 +543,7 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
                   handleIngredientChange(idx, "carbs", e.target.value)
                 }
                 className="form-input ing-val"
-                placeholder="0"
+                placeholder="Węglo. (g)"
               />
 
               <input
@@ -555,7 +555,7 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
                   handleIngredientChange(idx, "fat", e.target.value)
                 }
                 className="form-input ing-val"
-                placeholder="0"
+                placeholder="Tłuszcze (g)"
               />
               <button
                 type="button"

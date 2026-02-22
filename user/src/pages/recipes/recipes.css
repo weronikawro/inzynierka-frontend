@@ -673,3 +673,76 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+  .recipes-layout {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 10px 30px 10px;
+  }
+
+  .recipes-filters {
+    position: relative;
+    top: 0;
+    padding: 15px;
+  }
+
+  .recipes-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .recipe-card {
+    min-height: auto;
+  }
+
+  .recipe-image {
+    height: 180px;
+  }
+
+  .drawer-content-left {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .modal-content.customization-modal-complex {
+    width: 100% !important;
+    max-height: 95vh;
+    border-radius: 15px;
+  }
+
+  .form-row-custom {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .ingredients-edit-header {
+    display: none;
+  }
+
+  .ing-edit-row-complex {
+    grid-template-columns: 1fr 1fr;
+    background: white;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .ing-edit-name {
+    grid-column: 1 / -1;
+  }
+
+  .modal-actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .modal-actions .btn-cancel,
+  .modal-actions .submit-btn {
+    width: 100% !important;
+  }
+}

@@ -662,3 +662,79 @@
     padding: 14px;
   }
 }
+
+@media (max-width: 768px) {
+  .recipe-form {
+    padding: 20px 15px;
+  }
+
+  .recipe-form-header {
+    padding: 15px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ingredients-header-row {
+    display: none;
+  }
+
+  .ingredient-row-complex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 15px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+  }
+
+  .ing-name-wrapper {
+    grid-column: 1 / -1;
+  }
+
+  .ingredient-row-complex .form-input {
+    width: 100%;
+    text-align: center;
+  }
+
+  .remove-ingredient-btn {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .suggestions-list {
+    position: relative;
+    top: 0;
+    max-width: 100%;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .nutrition-summary-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .instruction-item-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .instruction-item-row .remove-btn {
+    width: 100%;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    padding: 15px 20px;
+  }
+
+  .cancel-btn,
+  .submit-btn {
+    width: 100%;
+    padding: 14px;
+  }
+}

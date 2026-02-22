@@ -521,7 +521,7 @@ function RecipesPage({ user }) {
                           )
                         }
                         className="ing-edit-val"
-                        placeholder="0"
+                        placeholder="Kcal"
                       />
                       <input
                         type="number"
@@ -536,7 +536,7 @@ function RecipesPage({ user }) {
                           )
                         }
                         className="ing-edit-val"
-                        placeholder="0"
+                        placeholder="Białko"
                       />
                       <input
                         type="number"
@@ -551,7 +551,7 @@ function RecipesPage({ user }) {
                           )
                         }
                         className="ing-edit-val"
-                        placeholder="0"
+                        placeholder="Węglo."
                       />
                       <input
                         type="number"
@@ -566,7 +566,7 @@ function RecipesPage({ user }) {
                           )
                         }
                         className="ing-edit-val"
-                        placeholder="0"
+                        placeholder="Tłuszcze"
                       />
                       <button
                         className="ing-del-small"
