@@ -851,6 +851,7 @@ function DiaryPage({ user }) {
                         })
                       }
                       className="form-input"
+                      required
                     />
                   </div>
 
