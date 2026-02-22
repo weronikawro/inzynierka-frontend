@@ -1300,11 +1300,11 @@ function EntryItem({ entry, onEdit, onDelete, formatKcal, formatMacro }) {
             className="entry-meal-image"
             onError={() => setImgError(true)}
           />
-        ) : (
+        ) : entry.type !== "custom" ? (
           <div className="entry-meal-placeholder">
             <img src={ImageIcon} alt="Brak" />
           </div>
-        )}
+        ) : null}
         <div className="entry-text">
           <span className="entry-name-main">{entry.name}</span>
           <span className="entry-stats-sub">
