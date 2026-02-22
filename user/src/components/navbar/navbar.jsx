@@ -48,7 +48,8 @@ function UserAccount({ user, onLogout, setCurrentPage }) {
         </div>
         <div className="user-info">
           <span className="user-name">
-            {user.firstName} {user.lastName}
+            <span className="first-name">{user.firstName}</span>
+            <span className="last-name"> {user.lastName}</span>
           </span>
         </div>
       </div>
