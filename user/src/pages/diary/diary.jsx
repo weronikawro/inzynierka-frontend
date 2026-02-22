@@ -675,7 +675,7 @@ function DiaryPage({ user }) {
             <form onSubmit={handleAddCustomMeal} className="custom-meal-form">
               <div className="modal-scroll-area">
                 <div className="form-group">
-                  <label>Nazwa posiłku *</label>
+                  <label>Nazwa posiłku</label>
                   <input
                     name="name"
                     value={mealForm.name}
@@ -683,6 +683,21 @@ function DiaryPage({ user }) {
                     className="form-input"
                     required
                   />
+                </div>
+                <div className="form-group">
+                  <label>Kategoria posiłku</label>
+                  <select
+                    name="mealType"
+                    value={mealForm.mealType}
+                    onChange={handleInputChange}
+                    className="form-select"
+                  >
+                    {mealTypes.map((t) => (
+                      <option key={t.value} value={t.value}>
+                        {t.label}
+                      </option>
+                    ))}
+                  </select>
                 </div>
                 <div className="form-row">
                   <div className="form-group">
@@ -1103,20 +1118,35 @@ function DiaryPage({ user }) {
                             className="ing-del-small"
                             onClick={() => {
                               if (customizingRecipe) {
-                                setCustomizingRecipe({
-                                  ...customizingRecipe,
-                                  tempIngredients:
-                                    customizingRecipe.tempIngredients.filter(
-                                      (_, i) => i !== idx,
-                                    ),
-                                });
+                                if (
+                                  customizingRecipe.tempIngredients.length > 1
+                                ) {
+                                  setCustomizingRecipe({
+                                    ...customizingRecipe,
+                                    tempIngredients:
+                                      customizingRecipe.tempIngredients.filter(
+                                        (_, i) => i !== idx,
+                                      ),
+                                  });
+                                } else {
+                                  alert(
+                                    "Przepis musi mieć chociaż jeden składnik!",
+                                  );
+                                }
                               } else {
-                                setEditingEntry({
-                                  ...editingEntry,
-                                  ingredients: editingEntry.ingredients.filter(
-                                    (_, i) => i !== idx,
-                                  ),
-                                });
+                                if (editingEntry.ingredients.length > 1) {
+                                  setEditingEntry({
+                                    ...editingEntry,
+                                    ingredients:
+                                      editingEntry.ingredients.filter(
+                                        (_, i) => i !== idx,
+                                      ),
+                                  });
+                                } else {
+                                  alert(
+                                    "Posiłek musi mieć chociaż jeden składnik!",
+                                  );
+                                }
                               }
                             }}
                           >

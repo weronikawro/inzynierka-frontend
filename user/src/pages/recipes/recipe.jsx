@@ -247,8 +247,12 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
     }));
 
   const removeIngredient = (idx) => {
-    const filtered = formData.ingredients.filter((_, i) => i !== idx);
-    calculateTotals(filtered, formData.servings);
+    if (formData.ingredients.length > 1) {
+      const filtered = formData.ingredients.filter((_, i) => i !== idx);
+      calculateTotals(filtered, formData.servings);
+    } else {
+      alert("Przepis musi zawierać przynajmniej jeden składnik!");
+    }
   };
 
   const handleInstructionChange = (idx, val) => {

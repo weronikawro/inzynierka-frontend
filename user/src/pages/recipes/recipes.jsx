@@ -570,15 +570,19 @@ function RecipesPage({ user }) {
                       />
                       <button
                         className="ing-del-small"
-                        onClick={() =>
-                          setCustomizingRecipe({
-                            ...customizingRecipe,
-                            tempIngredients:
-                              customizingRecipe.tempIngredients.filter(
-                                (_, i) => i !== idx,
-                              ),
-                          })
-                        }
+                        onClick={() => {
+                          if (customizingRecipe.tempIngredients.length > 1) {
+                            setCustomizingRecipe({
+                              ...customizingRecipe,
+                              tempIngredients:
+                                customizingRecipe.tempIngredients.filter(
+                                  (_, i) => i !== idx,
+                                ),
+                            });
+                          } else {
+                            alert("Posiłek musi mieć chociaż jeden składnik!");
+                          }
+                        }}
                       >
                         &times;
                       </button>
