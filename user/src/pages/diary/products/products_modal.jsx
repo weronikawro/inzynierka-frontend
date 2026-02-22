@@ -28,7 +28,7 @@ function ProductsModal({ onClose, selectedDate, onEntryAdded }) {
   ];
 
   const categories = [
-    { value: "", label: "Wszystkie kategorie" },
+    { value: "", label: "Wszystkie" },
     { value: "vegetables", label: "Warzywa" },
     { value: "fruits", label: "Owoce" },
     { value: "dairy", label: "Nabiał" },

@@ -55,6 +55,11 @@
   white-space: nowrap;
 }
 
+.add-custom-prod-btn:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
 .btn-icon-svg-small {
   width: 16px;
   height: 16px;
