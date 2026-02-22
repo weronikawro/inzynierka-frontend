@@ -518,6 +518,30 @@ select:focus {
 }
 
 @media (max-width: 900px) {
+  .password-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(2px);
+  }
+
+  .password-sidebar .account-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.2s ease-out;
+  }
+
   .account-content-wrapper.with-sidebar {
     grid-template-columns: 1fr;
   }
