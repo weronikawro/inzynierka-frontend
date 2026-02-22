@@ -970,3 +970,116 @@ input.ing-edit-amount {
   height: 24px;
   opacity: 0.4;
 }
+
+@media (max-width: 768px) {
+  .diary-full-layout {
+    padding: 0 10px 30px 10px;
+    gap: 15px;
+  }
+
+  .daily-summary-header {
+    padding: 20px 15px;
+    border-radius: 20px;
+  }
+
+  .kcal-status .current-kcal {
+    font-size: 2.2rem;
+  }
+
+  .macros-status-row {
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .macro-stat {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .diary-controls-row {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .custom-date-navigator {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .controls-right-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-new-custom,
+  .btn-new-db {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .entry-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .entry-left-content {
+    width: 100%;
+  }
+
+  .entry-actions {
+    width: 100%;
+    justify-content: flex-end;
+    padding-top: 10px;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .modal-content,
+  .modal-content.recipe-modal,
+  .modal-content.edit-diary-modal {
+    width: 100%;
+    max-height: 95vh;
+    border-radius: 15px;
+  }
+
+  .modal-header {
+    padding: 15px 20px;
+  }
+
+  .modal-scroll-area {
+    padding: 15px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .recipe-search-row {
+    flex-direction: column;
+  }
+
+  .ingredients-edit-header {
+    display: none;
+  }
+
+  .ing-edit-row-complex {
+    grid-template-columns: 1fr 1fr;
+    background: #f8fafc;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .autocomplete-wrapper {
+    grid-column: 1 / -1;
+  }
+
+  .ing-del-small {
+    height: 38px;
+  }
+}

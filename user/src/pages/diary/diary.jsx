@@ -1054,6 +1054,7 @@ function DiaryPage({ user }) {
                                   )
                             }
                             className="ing-edit-val"
+                            placeholder="Kcal"
                           />
 
                           <input
@@ -1074,6 +1075,7 @@ function DiaryPage({ user }) {
                                   )
                             }
                             className="ing-edit-val"
+                            placeholder="Białko (g)"
                           />
                           <input
                             type="number"
@@ -1093,6 +1095,7 @@ function DiaryPage({ user }) {
                                   )
                             }
                             className="ing-edit-val"
+                            placeholder="Węglo. (g)"
                           />
                           <input
                             type="number"
@@ -1112,6 +1115,7 @@ function DiaryPage({ user }) {
                                   )
                             }
                             className="ing-edit-val"
+                            placeholder="Tłuszcz (g)"
                           />
 
                           <button
