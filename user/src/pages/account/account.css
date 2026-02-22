@@ -522,3 +522,58 @@ select:focus {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .account-container {
+    padding: 15px 10px;
+  }
+
+  .account-card {
+    padding: 20px 15px;
+  }
+
+  .account-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .edit-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .avatar-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatar-placeholder-large {
+    font-size: 2.5rem;
+  }
+
+  .form-grid-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .weight-analysis-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .macro-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .modal-content-small {
+    width: 90%;
+    padding: 20px;
+  }
+}
