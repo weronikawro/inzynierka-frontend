@@ -1061,6 +1061,32 @@ input.ing-edit-amount {
     flex-direction: column;
   }
 
+  .recipe-select-card {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+
+  .recipe-select-controls {
+    width: 100%;
+    margin-top: 5px;
+    padding-top: 15px;
+    border-top: 1px solid #f1f5f9;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .recipe-select-controls .form-select-small {
+    flex: 1;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .add-recipe-meal-btn,
+  .edit-recipe-meal-btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
   .ingredients-edit-header {
     display: none;
   }
