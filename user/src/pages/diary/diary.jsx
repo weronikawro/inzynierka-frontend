@@ -851,7 +851,6 @@ function DiaryPage({ user }) {
                         })
                       }
                       className="form-input"
-                      required
                     />
                   </div>
 
@@ -1210,7 +1209,7 @@ function DiaryPage({ user }) {
                         </strong>
                       </div>
                       <div>
-                        <span>Węgle</span>
+                        <span>Węglowodany</span>
                         <strong>
                           {customizingRecipe
                             ? formatMacro(

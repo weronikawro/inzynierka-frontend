@@ -203,19 +203,29 @@ function ProductsModal({ onClose, selectedDate, onEntryAdded }) {
                   </div>
                 )}
 
-                <div className="products-toolbar">
+                <div className="recipe-search-row">
                   <input
                     type="text"
                     placeholder="Szukaj produktu..."
-                    className="products-search"
+                    className="search-input"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
+                  <select
+                    className="diet-select"
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                  >
+                    {categories.map((cat) => (
+                      <option key={cat.value} value={cat.value}>
+                        {cat.label}
+                      </option>
+                    ))}
+                  </select>
                   <button
-                    className="btn-add-new-product"
+                    className="submit-btn add-custom-prod-btn"
                     onClick={() => setShowAddForm(true)}
                   >
-                    <img src={AddIcon} alt="" className="btn-icon-svg-small" />{" "}
                     Dodaj własny
                   </button>
                 </div>

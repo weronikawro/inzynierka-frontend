@@ -99,7 +99,7 @@ function ProductAddForm({ onProductAdded, onCancel, initialData }) {
           </div>
           <div className="form-row">
             <div className="form-group">
-              <label>Węgle</label>
+              <label>Węglowodany</label>
               <input
                 type="number"
                 min="0"
