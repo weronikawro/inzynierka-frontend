@@ -115,27 +115,21 @@ function RecipeDetails({ recipe, onClose, onAddToMeal, onEdit, user }) {
         <div className="info-card nutrition-card-full">
           <h3>Wartości odżywcze (na porcję)</h3>
           <div className="nutrition-grid">
-            <div className="nutrition-item calories">
-              <div className="nutrition-value">
-                {Math.round(recipe.calories || 0)}
-              </div>
-              <div className="nutrition-label">kcal</div>
-            </div>
             <div className="nutrition-item">
               <div className="nutrition-value">
-                {Math.round(recipe.protein || 0)}g
+                {Number(recipe.protein || 0).toFixed(1)}g
               </div>
               <div className="nutrition-label">Białko</div>
             </div>
             <div className="nutrition-item">
               <div className="nutrition-value">
-                {Math.round(recipe.carbs || 0)}g
+                {Number(recipe.carbs || 0).toFixed(1)}g
               </div>
               <div className="nutrition-label">Węglowodany</div>
             </div>
             <div className="nutrition-item">
               <div className="nutrition-value">
-                {Math.round(recipe.fat || 0)}g
+                {Number(recipe.fat || 0).toFixed(1)}g
               </div>
               <div className="nutrition-label">Tłuszcze</div>
             </div>

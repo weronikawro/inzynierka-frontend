@@ -123,10 +123,10 @@ function DiaryPage({ user }) {
     if (!baseValues) return { calories: 0, protein: 0, carbs: 0, fat: 0 };
     const ratio = amount / 100;
     return {
-      calories: baseValues.calories * ratio,
-      protein: baseValues.protein * ratio,
-      carbs: baseValues.carbs * ratio,
-      fat: baseValues.fat * ratio,
+      calories: Math.round(baseValues.calories * ratio),
+      protein: parseFloat((baseValues.protein * ratio).toFixed(1)),
+      carbs: parseFloat((baseValues.carbs * ratio).toFixed(1)),
+      fat: parseFloat((baseValues.fat * ratio).toFixed(1)),
     };
   };
 
@@ -305,10 +305,10 @@ function DiaryPage({ user }) {
       const mealData = {
         ...mealForm,
         date: selectedDate,
-        calories: parseFloat(mealForm.calories) || 0,
-        protein: parseFloat(mealForm.protein) || 0,
-        carbs: parseFloat(mealForm.carbs) || 0,
-        fat: parseFloat(mealForm.fat) || 0,
+        calories: Math.round(parseFloat(mealForm.calories) || 0),
+        protein: parseFloat(Number(mealForm.protein).toFixed(1)) || 0,
+        carbs: parseFloat(Number(mealForm.carbs).toFixed(1)) || 0,
+        fat: parseFloat(Number(mealForm.fat).toFixed(1)) || 0,
         portion: parseFloat(mealForm.portion) || 1,
         type: "custom",
       };
@@ -378,6 +378,10 @@ function DiaryPage({ user }) {
         date: selectedDate,
         mealType: mealTypeForCustomizing,
         ...totals,
+        calories: Math.round(totals.calories),
+        protein: parseFloat(Number(totals.protein).toFixed(1)),
+        carbs: parseFloat(Number(totals.carbs).toFixed(1)),
+        fat: parseFloat(Number(totals.fat).toFixed(1)),
         ingredients: customizingRecipe.tempIngredients,
         type: "recipe",
         recipeId: customizingRecipe._id,
@@ -404,9 +408,9 @@ function DiaryPage({ user }) {
       let updatedData = {
         ...editingEntry,
         calories: Math.round(parseFloat(editingEntry.calories) || 0),
-        protein: parseFloat(editingEntry.protein) || 0,
-        carbs: parseFloat(editingEntry.carbs) || 0,
-        fat: parseFloat(editingEntry.fat) || 0,
+        protein: parseFloat(Number(editingEntry.protein).toFixed(1)) || 0,
+        carbs: parseFloat(Number(editingEntry.carbs).toFixed(1)) || 0,
+        fat: parseFloat(Number(editingEntry.fat).toFixed(1)) || 0,
       };
 
       if (editingEntry.type === "recipe" && editingEntry.ingredients) {
@@ -423,6 +427,9 @@ function DiaryPage({ user }) {
           ...updatedData,
           ...totals,
           calories: Math.round(totals.calories),
+          protein: parseFloat(Number(totals.protein).toFixed(1)),
+          carbs: parseFloat(Number(totals.carbs).toFixed(1)),
+          fat: parseFloat(Number(totals.fat).toFixed(1)),
         };
       }
 
@@ -837,6 +844,8 @@ function DiaryPage({ user }) {
                       <label>Kcal</label>
                       <input
                         type="number"
+                        min="0"
+                        step="1"
                         value={editingEntry.calories}
                         onChange={(e) =>
                           setEditingEntry({
@@ -851,6 +860,7 @@ function DiaryPage({ user }) {
                       <label>Białko (g)</label>
                       <input
                         type="number"
+                        min="0"
                         step="0.1"
                         value={editingEntry.protein}
                         onChange={(e) =>
@@ -868,6 +878,7 @@ function DiaryPage({ user }) {
                       <label>Węglowodany (g)</label>
                       <input
                         type="number"
+                        min="0"
                         step="0.1"
                         value={editingEntry.carbs}
                         onChange={(e) =>
@@ -883,6 +894,7 @@ function DiaryPage({ user }) {
                       <label>Tłuszcze (g)</label>
                       <input
                         type="number"
+                        min="0"
                         step="0.1"
                         value={editingEntry.fat}
                         onChange={(e) =>

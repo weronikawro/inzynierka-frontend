@@ -227,6 +227,10 @@ function RecipesPage({ user }) {
         date: selectedDateForDiary,
         mealType: mealType,
         ...tempTotals,
+        calories: Math.round(tempTotals.calories),
+        protein: parseFloat(Number(tempTotals.protein).toFixed(1)),
+        carbs: parseFloat(Number(tempTotals.carbs).toFixed(1)),
+        fat: parseFloat(Number(tempTotals.fat).toFixed(1)),
         type: "recipe",
         recipeId: customizingRecipe._id,
         ingredients: customizingRecipe.tempIngredients,
@@ -507,6 +511,7 @@ function RecipesPage({ user }) {
                       <input
                         type="number"
                         min="0"
+                        step="1"
                         value={ing.calories || ""}
                         onChange={(e) =>
                           handleEditCustomizingIngredient(
@@ -521,6 +526,7 @@ function RecipesPage({ user }) {
                       <input
                         type="number"
                         min="0"
+                        step="0.1"
                         value={ing.protein || ""}
                         onChange={(e) =>
                           handleEditCustomizingIngredient(
@@ -535,6 +541,7 @@ function RecipesPage({ user }) {
                       <input
                         type="number"
                         min="0"
+                        step="0.1"
                         value={ing.carbs || ""}
                         onChange={(e) =>
                           handleEditCustomizingIngredient(
@@ -549,6 +556,7 @@ function RecipesPage({ user }) {
                       <input
                         type="number"
                         min="0"
+                        step="0.1"
                         value={ing.fat || ""}
                         onChange={(e) =>
                           handleEditCustomizingIngredient(

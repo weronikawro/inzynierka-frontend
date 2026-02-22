@@ -93,8 +93,10 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
           : [""],
         tags: initialData.tags || [],
         calories: Math.round(initialData.calories || 0),
+        protein: parseFloat(Number(initialData.protein || 0).toFixed(1)),
+        carbs: parseFloat(Number(initialData.carbs || 0).toFixed(1)),
+        fat: parseFloat(Number(initialData.fat || 0).toFixed(1)),
         category: initialCategories,
-        difficulty: initialData.difficulty || "medium",
       });
     }
   }, [initialData]);
@@ -276,9 +278,9 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
         cookTime: parseInt(formData.cookTime) || 0,
         servings: parseInt(formData.servings) || 1,
         calories: Math.round(formData.calories || 0),
-        protein: parseFloat(formData.protein || 0),
-        carbs: parseFloat(formData.carbs || 0),
-        fat: parseFloat(formData.fat || 0),
+        protein: parseFloat(Number(formData.protein || 0).toFixed(1)),
+        carbs: parseFloat(Number(formData.carbs || 0).toFixed(1)),
+        fat: parseFloat(Number(formData.fat || 0).toFixed(1)),
       };
       let res;
       if (initialData) {

@@ -36,10 +36,10 @@ function ProductAddForm({ onProductAdded, onCancel, initialData }) {
     try {
       const payload = {
         ...formData,
-        calories: parseFloat(formData.calories) || 0,
-        protein: parseFloat(formData.protein) || 0,
-        carbs: parseFloat(formData.carbs) || 0,
-        fat: parseFloat(formData.fat) || 0,
+        calories: Math.round(parseFloat(formData.calories) || 0),
+        protein: parseFloat(Number(formData.protein).toFixed(1)) || 0,
+        carbs: parseFloat(Number(formData.carbs).toFixed(1)) || 0,
+        fat: parseFloat(Number(formData.fat).toFixed(1)) || 0,
       };
 
       let response;
@@ -76,6 +76,8 @@ function ProductAddForm({ onProductAdded, onCancel, initialData }) {
               <label>Kcal</label>
               <input
                 type="number"
+                min="0"
+                step="1"
                 name="calories"
                 value={formData.calories}
                 onChange={handleChange}
@@ -86,6 +88,7 @@ function ProductAddForm({ onProductAdded, onCancel, initialData }) {
               <label>Białko</label>
               <input
                 type="number"
+                min="0"
                 step="0.1"
                 name="protein"
                 value={formData.protein}
@@ -99,6 +102,7 @@ function ProductAddForm({ onProductAdded, onCancel, initialData }) {
               <label>Węgle</label>
               <input
                 type="number"
+                min="0"
                 step="0.1"
                 name="carbs"
                 value={formData.carbs}
@@ -110,6 +114,7 @@ function ProductAddForm({ onProductAdded, onCancel, initialData }) {
               <label>Tłuszcz</label>
               <input
                 type="number"
+                min="0"
                 step="0.1"
                 name="fat"
                 value={formData.fat}
