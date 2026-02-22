@@ -94,9 +94,9 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
         tags: initialData.tags || [],
         category: initialCategories,
         calories: Math.round(initialData.calories || 0),
-        protein: Math.round(initialData.protein || 0),
-        carbs: Math.round(initialData.carbs || 0),
-        fat: Math.round(initialData.fat || 0),
+        protein: parseFloat(Number(initialData.protein || 0).toFixed(1)),
+        carbs: parseFloat(Number(initialData.carbs || 0).toFixed(1)),
+        fat: parseFloat(Number(initialData.fat || 0).toFixed(1)),
       });
     }
   }, [initialData]);
@@ -105,7 +105,7 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
     if (!baseValues) return { calories: 0, protein: 0, carbs: 0, fat: 0 };
     const ratio = amount / 100;
     return {
-      calories: parseFloat((baseValues.calories * ratio).toFixed(1)),
+      calories: Math.round(baseValues.calories * ratio),
       protein: parseFloat((baseValues.protein * ratio).toFixed(1)),
       carbs: parseFloat((baseValues.carbs * ratio).toFixed(1)),
       fat: parseFloat((baseValues.fat * ratio).toFixed(1)),
@@ -129,9 +129,9 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
       ingredients,
       servings: numServings,
       calories: Math.round(totals.calories / numServings),
-      protein: Math.round(totals.protein / numServings),
-      carbs: Math.round(totals.carbs / numServings),
-      fat: Math.round(totals.fat / numServings),
+      protein: parseFloat((totals.protein / numServings).toFixed(1)),
+      carbs: parseFloat((totals.carbs / numServings).toFixed(1)),
+      fat: parseFloat((totals.fat / numServings).toFixed(1)),
     }));
   };
 
@@ -271,9 +271,9 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
         prepTime: parseInt(formData.prepTime) || 0,
         cookTime: parseInt(formData.cookTime) || 0,
         calories: Math.round(formData.calories),
-        protein: Math.round(formData.protein),
-        carbs: Math.round(formData.carbs),
-        fat: Math.round(formData.fat),
+        protein: parseFloat(Number(formData.protein).toFixed(1)),
+        carbs: parseFloat(Number(formData.carbs).toFixed(1)),
+        fat: parseFloat(Number(formData.fat).toFixed(1)),
       };
 
       let finalRecipe;
@@ -529,6 +529,7 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
                   <input
                     type="number"
                     min="0"
+                    step="1"
                     value={ing.calories || ""}
                     onChange={(e) =>
                       handleIngredientChange(index, "calories", e.target.value)
@@ -543,6 +544,7 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
                   <input
                     type="number"
                     min="0"
+                    step="0.1"
                     value={ing.protein || ""}
                     onChange={(e) =>
                       handleIngredientChange(index, "protein", e.target.value)
@@ -557,6 +559,7 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
                   <input
                     type="number"
                     min="0"
+                    step="0.1"
                     value={ing.carbs || ""}
                     onChange={(e) =>
                       handleIngredientChange(index, "carbs", e.target.value)
@@ -571,6 +574,7 @@ function RecipeForm({ onRecipeAdded, onClose, initialData = null }) {
                   <input
                     type="number"
                     min="0"
+                    step="0.1"
                     value={ing.fat || ""}
                     onChange={(e) =>
                       handleIngredientChange(index, "fat", e.target.value)

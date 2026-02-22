@@ -45,10 +45,22 @@ function ProductForm({ onProductSaved, onClose, initialData = null }) {
         name: initialData.name || "",
         category: initialData.category || "other",
         unit: initialData.unit || "g",
-        calories: initialData.calories !== undefined ? initialData.calories : 0,
-        protein: initialData.protein !== undefined ? initialData.protein : 0,
-        carbs: initialData.carbs !== undefined ? initialData.carbs : 0,
-        fat: initialData.fat !== undefined ? initialData.fat : 0,
+        calories:
+          initialData.calories !== undefined
+            ? Math.round(initialData.calories)
+            : 0,
+        protein:
+          initialData.protein !== undefined
+            ? parseFloat(Number(initialData.protein).toFixed(1))
+            : 0,
+        carbs:
+          initialData.carbs !== undefined
+            ? parseFloat(Number(initialData.carbs).toFixed(1))
+            : 0,
+        fat:
+          initialData.fat !== undefined
+            ? parseFloat(Number(initialData.fat).toFixed(1))
+            : 0,
         image: initialData.image || "",
       });
     }
@@ -107,10 +119,17 @@ function ProductForm({ onProductSaved, onClose, initialData = null }) {
     try {
       const payload = {
         ...formData,
-        calories: formData.calories === "" ? 0 : formData.calories,
-        protein: formData.protein === "" ? 0 : formData.protein,
-        carbs: formData.carbs === "" ? 0 : formData.carbs,
-        fat: formData.fat === "" ? 0 : formData.fat,
+        calories: formData.calories === "" ? 0 : Math.round(formData.calories),
+        protein:
+          formData.protein === ""
+            ? 0
+            : parseFloat(Number(formData.protein).toFixed(1)),
+        carbs:
+          formData.carbs === ""
+            ? 0
+            : parseFloat(Number(formData.carbs).toFixed(1)),
+        fat:
+          formData.fat === "" ? 0 : parseFloat(Number(formData.fat).toFixed(1)),
       };
 
       let savedProduct;
@@ -247,6 +266,7 @@ function ProductForm({ onProductSaved, onClose, initialData = null }) {
                 <input
                   type="number"
                   name="calories"
+                  step="1"
                   className="form-input"
                   value={formData.calories}
                   onChange={handleChange}
@@ -263,6 +283,7 @@ function ProductForm({ onProductSaved, onClose, initialData = null }) {
                   <input
                     type="number"
                     name="protein"
+                    step="0.1"
                     className="form-input"
                     value={formData.protein}
                     onChange={handleChange}
@@ -277,6 +298,7 @@ function ProductForm({ onProductSaved, onClose, initialData = null }) {
                   <input
                     type="number"
                     name="carbs"
+                    step="0.1"
                     className="form-input"
                     value={formData.carbs}
                     onChange={handleChange}
@@ -291,6 +313,7 @@ function ProductForm({ onProductSaved, onClose, initialData = null }) {
                   <input
                     type="number"
                     name="fat"
+                    step="0.1"
                     className="form-input"
                     value={formData.fat}
                     onChange={handleChange}

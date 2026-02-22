@@ -124,19 +124,19 @@ function RecipeDetails({ recipe, onClose, onEdit }) {
             </div>
             <div className="nutrition-item">
               <div className="nutrition-value">
-                {Math.round(recipe.protein || 0)}g
+                {Number(recipe.protein || 0).toFixed(1)}g
               </div>
               <div className="nutrition-label">Białko</div>
             </div>
             <div className="nutrition-item">
               <div className="nutrition-value">
-                {Math.round(recipe.carbs || 0)}g
+                {Number(recipe.carbs || 0).toFixed(1)}g
               </div>
               <div className="nutrition-label">Węglowodany</div>
             </div>
             <div className="nutrition-item">
               <div className="nutrition-value">
-                {Math.round(recipe.fat || 0)}g
+                {Number(recipe.fat || 0).toFixed(1)}g
               </div>
               <div className="nutrition-label">Tłuszcze</div>
             </div>

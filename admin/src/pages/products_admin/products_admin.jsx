@@ -228,11 +228,22 @@ function ProductsPage({ user }) {
                       </span>
                     </td>
                     <td className="td-calories">{prod.calories}</td>
+                    <td className="td-calories">
+                      {Math.round(prod.calories || 0)}
+                    </td>
                     <td>
                       <div className="macro-mini">
-                        <span className="macro-protein">{prod.protein}g</span> /
-                        <span className="macro-carbs">{prod.carbs}g</span> /
-                        <span className="macro-fat">{prod.fat}g</span>
+                        <span className="macro-protein">
+                          {Number(prod.protein || 0).toFixed(1)}g
+                        </span>{" "}
+                        /
+                        <span className="macro-carbs">
+                          {Number(prod.carbs || 0).toFixed(1)}g
+                        </span>{" "}
+                        /
+                        <span className="macro-fat">
+                          {Number(prod.fat || 0).toFixed(1)}g
+                        </span>
                       </div>
                     </td>
                     <td>
